@@ -1,15 +1,13 @@
-# Perpustakaan Anya Riskirana
+# Perpustakaan Anya 
 # Selamat Datang di Perpustakaan Anya Riskirana
-# About Me
 
 <body>
-Hi, perkenalkan, nama saya Anya Riskirana. Ini adalah homepage perpustakaan personal saya yang berisi tugas-tugas akademik.
+Hi, Perkenalkan, Nama saya Anya Riskirana. Ini adalah homepage perpustakaan personal saya yang berisi tugas-tugas akademik.
 <h4><a href="https://library.sari-mutiara.ac.id//">Kerjasama</a>
 <h3>Homepage</h3>
-    
-<bottom>
-    
-<h2>Biodata</h2>
+
+ # About Me   
+
 <table>
     <tr>
         <th>Informasi</th>
