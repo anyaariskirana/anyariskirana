@@ -6,7 +6,7 @@ Hi, Perkenalkan, Nama saya Anya Riskirana. Ini adalah homepage perpustakaan pers
 <h4><a href="https://library.sari-mutiara.ac.id//">Kerjasama</a>
 <h3>Homepage</h3>
 
- <h3>Tentang Saya</h3>
+ <h3>About Me</h3>
 
 <table>
     <tr>
