@@ -6,7 +6,9 @@
 Hi, perkenalkan, nama saya Anya Riskirana. Ini adalah homepage perpustakaan personal saya yang berisi tugas-tugas akademik.
 <h4><a href="https://library.sari-mutiara.ac.id//">Kerjasama</a>
 <h3>Homepage</h3>
-
+    
+<bottom>
+    
 <h2>Biodata</h2>
 <table>
     <tr>
