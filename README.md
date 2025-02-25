@@ -36,4 +36,4 @@ Hi, Perkenalkan, Nama saya Anya Riskirana. Ini adalah homepage perpustakaan pers
         <td>Email</td>
         <td>anyariskirana@gamil.com</td>
 
-[Contact Us](https://file:///C:/Users/ASUS/index.html)
+[Contact Us](https://file:C:/Users/ASUS/index.html)
