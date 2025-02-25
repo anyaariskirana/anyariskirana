@@ -36,8 +36,6 @@ Hi, Perkenalkan, Nama saya Anya Riskirana. Ini adalah homepage perpustakaan pers
         <td>Email</td>
         <td>anyariskirana@gamil.com</td>
 
-         <!DOCTYPE html>
-<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,8 +64,5 @@ Hi, Perkenalkan, Nama saya Anya Riskirana. Ini adalah homepage perpustakaan pers
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
-        </ul>
-    </div>
-</body>
-</html>
+        
 
