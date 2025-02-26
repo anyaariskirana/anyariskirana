@@ -36,39 +36,3 @@ Hi, Perkenalkan, Nama saya Anya Riskirana. Ini adalah homepage perpustakaan pers
         <td>Email</td>
         <td>anyariskirana@gamil.com</td>
 
-[Contact Us]
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Contact Us</h1>
-        <p>Mau tau lebih banyak tentangku? Kirimi aku pesan dengan mengisi form di bawah ini</p>
-        
-        <form action="#" method="post">
-            <label for="nama">Nama:</label>
-            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda"><br>
-        </p>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Masukkan email Anda"><br>
-        </p>
-            <label for="pesan">Pesan:</label>
-            <textarea id="pesan" name="pesan" placeholder="Tulis pesan Anda"></textarea><br>
-        </p>
-            <button type="submit">Kirim</button>
-        </form>
-
-        <h2>Halaman lain</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-        </ul>
-    </div>
-</body>
-</html>
-
