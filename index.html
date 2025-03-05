@@ -8,6 +8,9 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         .navbar {
             background-color: #87CEFA; /* Warna biru muda */
@@ -34,38 +37,48 @@
         .nav-links a:hover {
             text-decoration: underline;
         }
+        .content {
+            flex: 1; /* Membuat konten mengisi ruang yang tersisa */
+            padding: 20px;
+        }
+        footer {
+            background-color: #4682B4; /* Warna biru lebih gelap */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan untuk tampilan lebih elegan */
+        }
     </style>
 </head>
 <body>
 
     <div class="navbar">
-  
-        
-    </style>
-</head>
-<body>
-
-    <div class="navbar">
-        <h1>Perpustakaan Anya</h1><br>
+        <h1>Perpustakaan Anya</h1>
         <div class="nav-links">
-          <a href="index.html">Homepage</a>
+            <a href="index.html">Homepage</a>
             <a href="biodata.html">About Me</a>
-          <a href="contact us.html">contact us</a>
-
+            <a href="contact-us.html">Contact Us</a>
         </div>
-  
+    </div>
+
     <div class="content">
         <h2>Selamat Datang di Perpustakaan Anya Riskirana</h2>
-        <p>Ini adalah Perpustakaan personal saya yang berisi tugas-tugas akademik.</p>
-        
-        <li>Kami bekerja sama dengan perpustakaan lain.</li>
-      <a href="https://library.sari-mutiara.ac.id/" target="_blank">Perpustakaan Sari Mutiara</a><br>
+        <p>Ini adalah perpustakaan personal saya yang berisi tugas-tugas akademik.</p>
 
-        <p>Membaca adalah jendela dunia, mari buka lebih banyak jendela!</p><br>
+        <ul>
+            <li>Kami bekerja sama dengan perpustakaan lain.</li>
+        </ul>
+        <a href="https://library.sari-mutiara.ac.id/" target="_blank">Perpustakaan Sari Mutiara</a>
+
+        <p>Membaca adalah jendela dunia, mari buka lebih banyak jendela!</p>
     </div>
 
     <footer>
-        &copy; 2025 Perpustakaan Anya Riskirana
+        &copy; 2025 Perpustakaan Anya Riskirana | Semua Hak Dilindungi
     </footer>
 
 </body>
