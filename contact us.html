@@ -74,10 +74,12 @@
         document.getElementById("commentForm").addEventListener("submit", async function(event) {
             event.preventDefault();
             
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const phone = document.getElementById("phone").value;
-            const message = document.getElementById("message").value;
+            const mailOptions = {
+    from: email,
+    to: "anyariskirana@gmail.com", // 
+    subject: `Komentar dari ${name}`,
+    text: `Nama: ${name}\nEmail: ${email}\nNo. HP: ${phone}\nPesan: ${message}`
+};
             
             const responseMessage = document.getElementById("responseMessage");
             
