@@ -3,169 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Nuansa Hutan</title>
+    <title>Kontak - Hutan</title>
     <style>
         body {
+            background-image: url('https://source.unsplash.com/1600x900/?forest');
+            background-size: cover;
+            background-position: center;
             font-family: Arial, sans-serif;
-            background: url('https://source.unsplash.com/1600x900/?forest') no-repeat center center/cover;
-            margin: 0;
-            padding: 0;
             color: white;
+            text-align: center;
+            padding: 20px;
         }
         .container {
-            width: 50%;
-            margin: 50px auto;
-            background: rgba(44, 62, 80, 0.9);
+            background: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-        }
-        h1 {
-            text-align: center;
-            color: #C3E88D;
-        }
-        label {
-            font-weight: bold;
+            max-width: 400px;
+            margin: auto;
         }
         input, textarea {
             width: 100%;
             padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            border: 1px solid #6B8E23;
+            margin: 10px 0;
+            border: none;
             border-radius: 5px;
-            background: #DFF2BF;
-            color: #2F4F4F;
         }
         button {
-            background-color: #228B22;
+            background: green;
             color: white;
             padding: 10px;
             border: none;
+            cursor: pointer;
             width: 100%;
             border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
         }
         button:hover {
-            background-color: #2E8B57;
-        }
-        #responseMessage {
-            text-align: center;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        .game-container {
-            display: none;
-            text-align: center;
-            margin-top: 20px;
-        }
-        canvas {
-            background: #fff;
-            display: block;
-            margin: auto;
+            background: darkgreen;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Hubungi Kami</h1>
-        <p>Berikan saran, kritikan, atau pertanyaan Anda untuk layanan perpustakaan ini.</p>
-        <form id="commentForm">
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="phone">No. HP:</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="message">Pesan:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            
-            <button type="submit">Kirim Pesan</button>
+        <h2>Kontak Kami</h2>
+        <form action="send_email.php" method="post">
+            <input type="text" name="nama" placeholder="Nama" required>
+            <input type="text" name="nomor_hp" placeholder="Nomor HP" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="pesan" placeholder="Pesan" rows="5" required></textarea>
+            <button type="submit">Kirim</button>
         </form>
-        <p id="responseMessage"></p>
     </div>
-
-    <div class="game-container" id="gameContainer">
-        <h2>Terjadi Kesalahan! Mainkan Dino Game</h2>
-        <canvas id="gameCanvas" width="600" height="200"></canvas>
-    </div>
-
-    <script>
-        document.getElementById("commentForm").addEventListener("submit", async function(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const phone = document.getElementById("phone").value;
-            const message = document.getElementById("message").value;
-            
-            const responseMessage = document.getElementById("responseMessage");
-            const gameContainer = document.getElementById("gameContainer");
-            
-            try {
-                throw new Error("Simulasi kesalahan");
-            } catch (error) {
-                responseMessage.innerText = "Terjadi kesalahan. Silakan coba lagi.";
-                responseMessage.style.color = "red";
-                gameContainer.style.display = "block";
-                startGame();
-            }
-        });
-
-        function startGame() {
-            const canvas = document.getElementById("gameCanvas");
-            const ctx = canvas.getContext("2d");
-            let dino = { x: 50, y: 150, width: 20, height: 20, velocityY: 0, gravity: 1 };
-            let obstacle = { x: 600, y: 150, width: 20, height: 20 };
-            let isJumping = false;
-            let gameOver = false;
-
-            function draw() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ctx.fillStyle = "black";
-                ctx.fillRect(dino.x, dino.y, dino.width, dino.height);
-                ctx.fillStyle = "red";
-                ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
-            }
-
-            function update() {
-                if (!gameOver) {
-                    obstacle.x -= 5;
-                    if (obstacle.x < -20) {
-                        obstacle.x = 600;
-                    }
-                    
-                    if (isJumping) {
-                        dino.velocityY -= dino.gravity;
-                        dino.y -= dino.velocityY;
-                        if (dino.y >= 150) {
-                            dino.y = 150;
-                            isJumping = false;
-                        }
-                    }
-
-                    if (dino.x < obstacle.x + obstacle.width && dino.x + dino.width > obstacle.x &&
-                        dino.y < obstacle.y + obstacle.height && dino.y + dino.height > obstacle.y) {
-                        gameOver = true;
-                        alert("Game Over! Tekan F5 untuk bermain lagi.");
-                    }
-                    draw();
-                    requestAnimationFrame(update);
-                }
-            }
-
-            document.addEventListener("keydown", function(event) {
-                if (event.code === "Space" && !isJumping) {
-                    isJumping = true;
-                    dino.velocityY = 15;
-                }
-            });
-            update();
-        }
-    </script>
 </body>
 </html>
