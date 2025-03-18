@@ -1,49 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Hutan</title>
+    <style>
+        /* Styling halaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://source.unsplash.com/1600x900/?forest'); /* Gambar hutan */
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(0, 51, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        /* Container utama */
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            width: 60%;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: black;
+        }
+
+        h1, h4 {
+            text-align: center;
+            color: #004d00;
+        }
+
+        /* Tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #004d00;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #008000;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        /* Navigasi */
+        ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+        }
+
+        ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #008000;
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 2px solid #008000;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            background: #008000;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: white;
+            background: rgba(0, 51, 0, 0.8);
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
-	<h1>About Me</h1>
-	<p>halaman ini berisi tentang saya</p>
-    <table border="1" cellspacing="0" cellpadding="5">
-        <tr>
-            <!-- td = tabel data -->
-            <td><b>Nama</b></td>
-            <td>Anya Riskirana</td>
-        </tr>
-        <tr>
-            <td><b>NIM</b></td>
-            <td>220709026</td>
-        </tr>
-        <tr>
-            <td><b>Program Studi</b></td>
-<td>Perpustakaan dan Sains Informasi</td>
-        </tr>
-        <tr>
-            <td><b>Fakultas</b></td>
-            <td>Ilmu Budaya</td>
-        </tr>
-        <tr>
-            <td><b>Universitas</b></td>
-            <td>Universitas Sumatera Utara</td>
-        </tr>
-<tr>
-<td><b>Email</b></td>
-<td>anyariskirana@gmail.com</td>
-</tr>
-    </table>
-        
-    <h4>Halaman lain</h4>
-    <ul>
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-        <li>
-            <a href="contact us.html">Contact Us</a>
-        </li>
-    </ul>
+
+    <div class="header">
+        <h1>About Me</h1>
+        <p>Halaman ini berisi informasi tentang saya</p>
+    </div>
+
+    <div class="container">
+        <table>
+            <tr>
+                <th>Informasi</th>
+                <th>Detail</th>
+            </tr>
+            <tr>
+                <td><b>Nama</b></td>
+                <td>Anya Riskirana</td>
+            </tr>
+            <tr>
+                <td><b>NIM</b></td>
+                <td>220709026</td>
+            </tr>
+            <tr>
+                <td><b>Program Studi</b></td>
+                <td>Perpustakaan dan Sains Informasi</td>
+            </tr>
+            <tr>
+                <td><b>Fakultas</b></td>
+                <td>Ilmu Budaya</td>
+            </tr>
+            <tr>
+                <td><b>Universitas</b></td>
+                <td>Universitas Sumatera Utara</td>
+            </tr>
+            <tr>
+                <td><b>Email</b></td>
+                <td>anyariskirana@gmail.com</td>
+            </tr>
+        </table>
+
+        <h4>Halaman Lain</h4>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Anya Riskirana
+    </div>
+
 </body>
 </html>
