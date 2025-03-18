@@ -51,6 +51,19 @@
             max-width: 800px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            position: relative;
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            display: block;
+            width: 100%;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
         }
         footer {
             background: rgba(34, 139, 34, 0.9);
@@ -83,7 +96,7 @@
     </div>
 
     <div class="content">
-        <h2>Selamat Datang di Perpustakaan Anya Riskirana</h2>
+        <h2 class="marquee">Selamat Datang di Perpustakaan Anya Riskirana</h2>
         <p>Ini adalah perpustakaan personal saya yang berisi tugas-tugas akademik.</p>
         <ul>
             <li>Kami bekerja sama dengan perpustakaan lain.</li>
