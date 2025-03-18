@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact Us - Nuansa Hutan</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ADD8E6;
+            background: url('https://source.unsplash.com/1600x900/?forest') no-repeat center center/cover;
             margin: 0;
             padding: 0;
+            color: white;
         }
         .container {
             width: 50%;
             margin: 50px auto;
-            background: white;
+            background: rgba(34, 85, 34, 0.9);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
         }
         h1 {
             text-align: center;
-            color: #4682B4;
+            color: #C3E88D;
         }
         label {
             font-weight: bold;
@@ -31,27 +32,35 @@
             padding: 10px;
             margin-top: 5px;
             margin-bottom: 10px;
-            border: 1px solid #87CEEB;
+            border: 1px solid #6B8E23;
             border-radius: 5px;
+            background: #DFF2BF;
+            color: #2F4F4F;
         }
         button {
-            background-color: #1E90FF;
+            background-color: #228B22;
             color: white;
             padding: 10px;
             border: none;
             width: 100%;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
         }
         button:hover {
-            background-color: #4682B4;
+            background-color: #2E8B57;
+        }
+        #responseMessage {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Hubungi Kami</h1>
-        <p>Berikan pesan, saran, atau pertanyaan Anda untuk layanan kami.</p>
+        <p>Berikan saran, kritikan, atau pertanyaan Anda untuk layanan perpustakaan ini.</p>
         <form id="commentForm">
             <label for="name">Nama:</label>
             <input type="text" id="name" name="name" required>
@@ -74,17 +83,15 @@
         document.getElementById("commentForm").addEventListener("submit", async function(event) {
             event.preventDefault();
             
-            const mailOptions = {
-    from: email,
-    to: "anyariskirana@gmail.com", // 
-    subject: `Komentar dari ${name}`,
-    text: `Nama: ${name}\nEmail: ${email}\nNo. HP: ${phone}\nPesan: ${message}`
-};
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
             
             const responseMessage = document.getElementById("responseMessage");
             
             try {
-                const response = await fetch("http://localhost:3000/send-comment", {
+                const response = await fetch("anyariskirana@gmail.com", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ name, email, phone, message })
@@ -92,12 +99,86 @@
                 
                 const result = await response.text();
                 responseMessage.innerText = result;
-                responseMessage.style.color = "green";
+                responseMessage.style.color = "#C3E88D";
             } catch (error) {
-                responseMessage.innerText = "Terjadi kesalahan. Silakan coba lagi.";
-                responseMessage.style.color = "red";
+                <h1>Oops! Terjadi Kesalahan</h1>
+    <p>Halaman yang Anda cari tidak dapat ditemukan. Sementara menunggu, mainkan game ini!</p>
+    <canvas id="gameCanvas" width="800" height="200"></canvas>
+    
+    <script>
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+
+        let dino = {
+            x: 50,
+            y: 150,
+            width: 30,
+            height: 30,
+            velocityY: 0,
+            gravity: 1,
+            isJumping: false
+        };
+
+        let obstacle = {
+            x: 800,
+            y: 150,
+            width: 20,
+            height: 30,
+            speed: 5
+        };
+
+        let isGameOver = false;
+        document.addEventListener("keydown", function (event) {
+            if (event.code === "Space" && !dino.isJumping) {
+                dino.velocityY = -15;
+                dino.isJumping = true;
             }
         });
+
+        function update() {
+            if (!isGameOver) {
+                dino.velocityY += dino.gravity;
+                dino.y += dino.velocityY;
+                if (dino.y > 150) {
+                    dino.y = 150;
+                    dino.isJumping = false;
+                }
+                obstacle.x -= obstacle.speed;
+                if (obstacle.x < -obstacle.width) {
+                    obstacle.x = 800;
+                }
+                if (
+                    dino.x < obstacle.x + obstacle.width &&
+                    dino.x + dino.width > obstacle.x &&
+                    dino.y < obstacle.y + obstacle.height &&
+                    dino.y + dino.height > obstacle.y
+                ) {
+                    isGameOver = true;
+                }
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "green";
+            ctx.fillRect(dino.x, dino.y, dino.width, dino.height);
+            ctx.fillStyle = "red";
+            ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+            if (isGameOver) {
+                ctx.fillStyle = "black";
+                ctx.font = "20px Arial";
+                ctx.fillText("Game Over! Refresh untuk bermain lagi", 300, 100);
+            }
+        }
+
+        function gameLoop() {
+            update();
+            draw();
+            requestAnimationFrame(gameLoop);
+        }
+
+        gameLoop();
     </script>
 </body>
 </html>
+
