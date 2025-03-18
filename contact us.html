@@ -15,7 +15,7 @@
         .container {
             width: 50%;
             margin: 50px auto;
-            background: rgba(34, 85, 34, 0.9);
+            background: rgba(44, 62, 80, 0.9);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
@@ -55,6 +55,16 @@
             margin-top: 10px;
             font-weight: bold;
         }
+        .game-container {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        canvas {
+            background: #fff;
+            display: block;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -79,6 +89,11 @@
         <p id="responseMessage"></p>
     </div>
 
+    <div class="game-container" id="gameContainer">
+        <h2>Terjadi Kesalahan! Mainkan Dino Game</h2>
+        <canvas id="gameCanvas" width="600" height="200"></canvas>
+    </div>
+
     <script>
         document.getElementById("commentForm").addEventListener("submit", async function(event) {
             event.preventDefault();
@@ -89,96 +104,68 @@
             const message = document.getElementById("message").value;
             
             const responseMessage = document.getElementById("responseMessage");
+            const gameContainer = document.getElementById("gameContainer");
             
             try {
-                const response = await fetch("anyariskirana@gmail.com", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ name, email, phone, message })
-                });
-                
-                const result = await response.text();
-                responseMessage.innerText = result;
-                responseMessage.style.color = "#C3E88D";
+                throw new Error("Simulasi kesalahan");
             } catch (error) {
-                <h1>Oops! Terjadi Kesalahan</h1>
-    <p>Halaman yang Anda cari tidak dapat ditemukan. Sementara menunggu, mainkan game ini!</p>
-    <canvas id="gameCanvas" width="800" height="200"></canvas>
-    
-    <script>
-        const canvas = document.getElementById("gameCanvas");
-        const ctx = canvas.getContext("2d");
-
-        let dino = {
-            x: 50,
-            y: 150,
-            width: 30,
-            height: 30,
-            velocityY: 0,
-            gravity: 1,
-            isJumping: false
-        };
-
-        let obstacle = {
-            x: 800,
-            y: 150,
-            width: 20,
-            height: 30,
-            speed: 5
-        };
-
-        let isGameOver = false;
-        document.addEventListener("keydown", function (event) {
-            if (event.code === "Space" && !dino.isJumping) {
-                dino.velocityY = -15;
-                dino.isJumping = true;
+                responseMessage.innerText = "Terjadi kesalahan. Silakan coba lagi.";
+                responseMessage.style.color = "red";
+                gameContainer.style.display = "block";
+                startGame();
             }
         });
 
-        function update() {
-            if (!isGameOver) {
-                dino.velocityY += dino.gravity;
-                dino.y += dino.velocityY;
-                if (dino.y > 150) {
-                    dino.y = 150;
-                    dino.isJumping = false;
-                }
-                obstacle.x -= obstacle.speed;
-                if (obstacle.x < -obstacle.width) {
-                    obstacle.x = 800;
-                }
-                if (
-                    dino.x < obstacle.x + obstacle.width &&
-                    dino.x + dino.width > obstacle.x &&
-                    dino.y < obstacle.y + obstacle.height &&
-                    dino.y + dino.height > obstacle.y
-                ) {
-                    isGameOver = true;
-                }
-            }
-        }
+        function startGame() {
+            const canvas = document.getElementById("gameCanvas");
+            const ctx = canvas.getContext("2d");
+            let dino = { x: 50, y: 150, width: 20, height: 20, velocityY: 0, gravity: 1 };
+            let obstacle = { x: 600, y: 150, width: 20, height: 20 };
+            let isJumping = false;
+            let gameOver = false;
 
-        function draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "green";
-            ctx.fillRect(dino.x, dino.y, dino.width, dino.height);
-            ctx.fillStyle = "red";
-            ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
-            if (isGameOver) {
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
                 ctx.fillStyle = "black";
-                ctx.font = "20px Arial";
-                ctx.fillText("Game Over! Refresh untuk bermain lagi", 300, 100);
+                ctx.fillRect(dino.x, dino.y, dino.width, dino.height);
+                ctx.fillStyle = "red";
+                ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
             }
-        }
 
-        function gameLoop() {
+            function update() {
+                if (!gameOver) {
+                    obstacle.x -= 5;
+                    if (obstacle.x < -20) {
+                        obstacle.x = 600;
+                    }
+                    
+                    if (isJumping) {
+                        dino.velocityY -= dino.gravity;
+                        dino.y -= dino.velocityY;
+                        if (dino.y >= 150) {
+                            dino.y = 150;
+                            isJumping = false;
+                        }
+                    }
+
+                    if (dino.x < obstacle.x + obstacle.width && dino.x + dino.width > obstacle.x &&
+                        dino.y < obstacle.y + obstacle.height && dino.y + dino.height > obstacle.y) {
+                        gameOver = true;
+                        alert("Game Over! Tekan F5 untuk bermain lagi.");
+                    }
+                    draw();
+                    requestAnimationFrame(update);
+                }
+            }
+
+            document.addEventListener("keydown", function(event) {
+                if (event.code === "Space" && !isJumping) {
+                    isJumping = true;
+                    dino.velocityY = 15;
+                }
+            });
             update();
-            draw();
-            requestAnimationFrame(gameLoop);
         }
-
-        gameLoop();
     </script>
 </body>
 </html>
-
