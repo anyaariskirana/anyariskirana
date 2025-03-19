@@ -12,7 +12,7 @@
             flex-direction: column;
             min-height: 100vh;
             text-align: center;
-           background-image: url('https://files.oaiusercontent.com/file-Q51kzyMpVDwcMQQBwrF2rK?se=2025-03-19T06%3A51%3A10Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D401e7b80-2ef0-47fa-9002-d4ca2fb0e557.webp&sig=JgZXpVliICS1WJOIMpQaNajnhAThF0/JFut9RgCBkT8%3D');
+            background-image: url('https://files.oaiusercontent.com/file-Q51kzyMpVDwcMQQBwrF2rK');
             background-size: cover;
             background-position: center;
             color: white;
@@ -21,23 +21,27 @@
             background: rgba(34, 139, 34, 0.8);
             padding: 15px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         .navbar h1 {
             color: #fff;
-            font-size: 24px;
+            font-size: 20px;
             margin: 0;
+            text-align: left;
+            padding-left: 10px;
         }
         .nav-links {
-            position: absolute;
-            right: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            padding-right: 10px;
         }
         .nav-links a {
             color: white;
             text-decoration: none;
-            margin-left: 15px;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
         }
         .nav-links a:hover {
@@ -47,12 +51,11 @@
             flex: 1;
             padding: 20px;
             background: rgba(0, 0, 0, 0.6);
-            margin: 20px auto;
-            max-width: 800px;
+            margin: 10px;
+            max-width: 90%;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             overflow: hidden;
-            position: relative;
         }
         .marquee {
             white-space: nowrap;
@@ -71,8 +74,6 @@
             text-align: center;
             padding: 15px;
             font-size: 14px;
-            position: relative;
-            bottom: 0;
             width: 100%;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
         }
@@ -82,6 +83,25 @@
         }
         a:hover {
             color: #32cd32;
+        }
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                padding: 5px;
+            }
+            .nav-links a {
+                padding: 5px;
+            }
+            .content {
+                max-width: 95%;
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -94,20 +114,16 @@
             <a href="contact us.html">Contact Us</a>
         </div>
     </div>
-
     <div class="content">
         <h2 class="marquee">Selamat Datang di Perpustakaan Anya Riskirana</h2>
         <p>Membaca adalah jendela dunia, mari buka lebih banyak jendela!</p><br>
-        <p>Perpustakaan Anya Riskirana adalah tempat di mana ilmu pengetahuan dan wawasan terbuka luas untuk semua<p/>
-            <p>perpustakaan ini menyediakan sumber daya terbaik guna mendukung kebutuhan belajar dan rekreasi Anda.</p>
+        <p>Perpustakaan Anya Riskirana adalah tempat di mana ilmu pengetahuan dan wawasan terbuka luas untuk semua.</p>
+        <p>Perpustakaan ini menyediakan sumber daya terbaik guna mendukung kebutuhan belajar dan rekreasi Anda.</p>
         <ul>
             Kami bekerja sama dengan <a href="https://library.sari-mutiara.ac.id/" target="_blank">Perpustakaan Sari Mutiara</a>
         </ul><br>
-        
         <p>Selamat menjelajahi jendela dunia!❤️</p>
-        
     </div>
-
     <footer>
         &copy; 2025 Perpustakaan Anya Riskirana | Semua Hak Dilindungi
     </footer>
