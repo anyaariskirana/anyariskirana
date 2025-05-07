@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perpustakaan Tazya</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f6ef;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #1d3557;
+    }
+
+    .search-box {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .book-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      border-radius: 8px;
+    }
+
+    .book-card img {
+      max-width: 130px;
+      height: auto;
+    }
+
+    .book-info {
+      flex: 1;
+    }
+
+    .book-title {
+      font-size: 1.5em;
+      color: #1d3557;
+      margin: 0;
+    }
+
+    .book-author {
+      font-style: italic;
+      color: #333;
+      margin: 5px 0;
+    }
+
+    .book-desc {
+      font-size: 1em;
+      color: #333;
+      text-align: justify;
+    }
+
+    .btn {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #1d3557;
+      color: #fff;
+      border: none;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #457b9d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Koleksi Buku Digital</h1>
+    <input type="text" class="search-box" placeholder="Cari buku...">
+
+    <div class="book-card">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/91bYsX41DVL.jpg" alt="Atomic Habits">
+      <div class="book-info">
+        <h2 class="book-title">Atomic Habits</h2>
+        <p class="book-author">James Clear</p>
+        <p class="book-desc">
+          Buku ini mengupas cara-cara untuk membentuk kebiasaan baik dan menghilangkan kebiasaan buruk melalui perubahan kecil yang konsisten.
+          James Clear menjelaskan bahwa kebiasaan adalah fondasi dari perubahan yang signifikan dalam hidup.
+          Melalui pendekatan yang berbasis pada ilmu psikologi dan neuroscience, Clear memperkenalkan The Four Laws of Behavior Change
+          yang membantu pembaca membentuk pola hidup yang lebih produktif.
+          Dengan memberikan contoh dari berbagai tokoh sukses, buku ini menjadi panduan praktis bagi siapa saja yang ingin meningkatkan kualitas hidup melalui kebiasaan yang positif.
+        </p>
+        <a href="#" class="btn">Baca Sekarang</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
 
