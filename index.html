@@ -124,6 +124,120 @@
             Kami bekerja sama dengan <a href="https://library.sari-mutiara.ac.id/" target="_blank">Perpustakaan Sari Mutiara</a>
         </ul><br>
         <p>Selamat menjelajahi jendela dunia!❤️</p>
+<head>
+    <meta charset="UTF-8">
+    <title>Featured Books</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .book-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .book-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        .book-content {
+            padding: 15px;
+            flex: 1;
+        }
+        .book-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #009688;
+            margin-bottom: 5px;
+        }
+        .book-author {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .book-description {
+            font-size: 0.9em;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        .detail-button {
+            display: inline-block;
+            text-align: center;
+            padding: 8px 12px;
+            border: 1px solid #009688;
+            color: #009688;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .detail-button:hover {
+            background-color: #009688;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Featured Books</h1>
+
+<div class="book-container">
+    <div class="book-card">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAKwAuAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAQIDBQYABwj/xABAEAACAQMDAQYDBgMGBQUBAAABAgMABBEFEiExBhMiQVFhMnGRFCNCgaGxUsHwBxUkctHhM1NUYvElQ4KSsjX/xAAaAQACAwEBAAAAAAAAAAAAAAABBAIDBQAG/8QAKhEAAgIBBAEDBQACAwAAAAAAAQIAAxEEEiExQQUTIhQyUWFxkbEjM0L/2gAMAwEAAhEDEQA/ALvp0p4PlTDTx8Oaw56+NNNNONNoToh561W28UbWlwNuNpYq2PhI6c1ZHFA2McbxuX3EGQkqG468cU1QwClotepZ1WSJPKRbghQZVP4T1AqWCXvd24bSjlGHuDTLsf4i2RW2Hx7Tx6CutHAgLMuGTO//ADD1ougZNwHcijMrlSeo4TB5mjAxtA59etNMzJdd2wG1lyvHOai8ccsDyEYfcpwMc9f9add7iTIu4mEofl6/oa4Vrn9EQmxsfvMe8rfa+6ULt2Zz+ddHI02WjZVXcQu4Zzj+VRoD9rjYjDNGTjHv/vT7DwwBDyU4OfKudAFyBzCjktgniNkuGEDONoZTgqc9c4qVRMzYG3kE9DxQcnitrpx8BfjnPmBRUYEbjLZ3YA9eP5c0SigcDzArknk+I2GSeSFZAq5OfDg+tNedhAk8RBjON25TxTrFhHZqzHwDJx+dJaRf4PZIPi3cGolV3HI8whmKjB8Rxd++2rtKhctwcikM22eOM/iB5ptiCYEbGWb4s9ajl3Mn2oHwrLnp+HpQFYLlTCXIQMIaKUU1TkZHSniliMcRnOYnSkOacabzXQyOT4c0tJJ8FdXZgzCTipB0xUTCpaMjGmm06mkV0MbioYFiSd44lC4Hl58/61Mc1CsTKysAoYAhjnrVi/aRmVvwwIEe4hM0e8Deen+1cIYjnKL4uvHWlmj7wcjw7evnmkCOibWbL+vSuJ4HMAAz1O2xSrt2AqhwoPODTEEBLlVHHDg9evNPhjMbnHwk5FNaDe5ZeGznP8Q9KII6zIkecTpVjBDlOR50/YkhyRg/OumUvFt8+P0rnHg8PxUN3A5ktv6jWSOZdpRSM4wRUUqpEGZYlbavO4daliQxu+Ph6ikmjaSNkDAZGC3kKKt88eJxX4Z8xscSAfeRxqF5HoPWn71kABXAYce5rmj7yHafxDb8qZtY7MlfDydvnXE57MIGOhGsI1JiVAB5jb1rmWFEWNo/B/DjikaJjMzbV427fnXTwmZgAcAZHvk0RgkZMByAcCTKAI8L0p1MjyseCVzTqpbuXCLXV1JQhjJPgrq6T4K6hBCSKfnK5FOignnhWWKGQqwBHFVuoXjLJ3EfDqcNn1qafI4EQv11dNW8mFtMgkWLd429PL3NPoXRrae4MssKGRQMFwudxqyNnc/8lvpUXZVOCZHRalrl3ucZ6gtdiihYXZ6QP/8AWnDTrv8A6eT6VHep8xz3U/ME5pMelFmxuf8Akt9K4adef9O1D3E8GH3UHmC+ntSYowadef8ATtTf7vu/+Q1D3E8md7qHzBaQUZ/d14elu1C6gkun27TXELDyRAeZGPAA/Op1kOQqyLXIo7lJqWq3Udy0Npb7+7IBJ5yetMSbUo3S4uo5ZMHIt4l5PzPlx+tbPsz2TgsbZZ79VnvJfHJv5Ck+QrRpawJjZCi44GFxitRTWgxiYtl9jnueYzaqImZnW52MQVWSDaRn36VPbalZ3JPczrlRkqRjFekyW8UqlZIkYHqGUHNZnWuyFlch5bFRa3HqgwG+YqJWqzgjEnXqraz3mUpByOR64PnXY5z50PaWtxYQra3+e+V2Ck4wQOnOfPmp0ZW+Fs/106UnZSyHE16tSjrnOIuPalApXDIgdxtQDJbBI+vSms6oSHbGOpqG0yZtr/MWkOaaZUxkOp6cZ6V3eJtyXH1864qRALqz5H+YknwV1OlRlXJDYxnpnikoYMO9fzLSw1AQ9mopQ3iC7FPoR/tWYtEEgDyq7sfFgA+fvQ0F1IiNDyY8Oyr5ckfyFE2F0bVluJCZBDnYmcLuHrjqB6ewq5NP7e7HkzwllxcjPibiG5s9B0qL7YRG+NxRRliT7VUy9qVKNJFbYTom5uT749Ky80r30rXd/JI8shyFPXH8h7fvXPJM6jdG6Rj4FCY4qoaOtuX5lp1di8JwJoYu1t3G26ZLZU/hy279/wCVW1l2s064dY5i8Dt/EMrn96ymjxNet3MNq2R8REIZfkTkf161e2HZd5pv/UIIo4gcju5Se8/LHAqq2rTrkHiWU26g4IOZp34bAqZQCqnA5qKbh6lj+BaxEHzImqehO6eQobA9KJfhWI8qgUZbBqN33AQr1JlGOgrJXUp1HtrZW7sDFBK2EI81UnP7fUVo9UvlsLTvcb2YhVHTxH+VYHQNVa/7aB3+7MNrLuwc4dmXJ+n7V6D0ug4Nn+JWx5nqa42gA9OhI/WkPHnWI1ntFptmY5TPdMQxAZHkIGOvsa0cmpR/3Ot8M7Xi3qcdfyrRKEYkIZNe28Zw9xEjDyLCopLlGXcGyPVTmsHqGo2tpZSX40yV494DuEByT9Sfnz5VWaNrCXsxfTA8G0jMOfDjzyBxVwoE7IziD9utTlTUJ49527cRr6VDpepd/EN4w7LwF65PTpn9qb22jfvra6ZSGZjj2FLomnzGOG4Jj2SjEZ3jGc+nryastXK4ECNhjmbbTNPhnUNdEHJztXw5+f8AtU2vXEOh6HeXVjHEk0URMY2j4vIkfrQ9k727dy+AVAOVrtdjgvdNazkl7p3wyhV3cqcjjIyMgdSAc9ayy218RoLkcSm0MyRxrcXN3e3Fww3OsspZGz5bfh5rTz6ZbzDMOYXPI28D8xWb0qC4+0rbSu8cI8QQ/i9uP661pwzLkoSR/B5GoO/MvZMATP3sEtse7lwOpGecn8/LFdV7fxxXto445zhscqf6yKWuzCtgAwRPPJPvGYKdp37f8uM5/QVKkocEKrCFAAp988fmf64FATSs+7uQTLM2PzOBmjVAOyGNgIYeN5PBPQn8+g/KnzPIn9x32ru5N0ihc+hwRWl7Pae927GYhIGAIcyDLfkfL3/U9Kzwlt4AWVBz+NziljuO+ceAFB1K5x+1U2IWXA4hrcKeRPS4Yo7ZFiiQKq9FFHD+WKwOn6r9mdBGzqP4JSSp+ta/TNUhvEVW+7mxkqTnd8jWE2lepjnkTXr1KWDjiFzgZU+tPi+D5U2f4QfSnQ/BSoGLTGv/ADEl4Q+9RwjL81JP8FNgHLH0qDDN0I4WDazY/wB5WTwbtj5yrehrFdjdJMfbHU4b2FRJHD8PUYYj9wK9ExxisT2aDRdtb/dI5aVWUrIORhhj5jAr0PpztsK+JS3c1LaVp8VusK20exOFQjwr+VRaqVSK3RQMKwbb8h5CiNSuII7eX7XIETGGx5+mKw2vaNaSGCR7/VY0hQd2m53K/mTk/nWhWC3Jh8TZyaTYX9uO9hjkQgYyoORT7fR9OsEP2e0iizwSqDms12W161jWHTEu+8kRSU38OwHt7Va3d/KxIyQB1+dEq27GZwGZiP7SLmJbqNVA2xKSR+dZbSNRxe27qsihFJSHJxnpuP70nbG8W71iaHfhE5ds+nkK60vNMhtYpSrm4LbAmTyPX9KaAxxKSeZp7C5uLaC6ubidZiGZwGIBwTwP2qtvNcktp45DuknkYSOynGF6cf15VPpptri0AmzHvJXO3n58VSahMF1yS3LpshQRj+FvPg/n+lL2UjdmMJcVWb6wvYrm2+0RP3mD1Bwwx1BXyNXpbcAB5V5NpuqtYaq/doe5fmWKPk56bgPX/wAdea9XjG1Fz8Xn86zNRXsMersFixqNsklX8LKWx7/0RXUycsp34ziNuPXkV1RXqRYczEWFm93eJBbFN+WKsxwF46n2HX8qhMckO2JEJBJUyspCZ+Z4z/WKstCZYr0xzOFSUEPIx24TIJ+oH61cdsHuZ7K1uIrOX7HEDgE4IB88DkLxx0/1Ye/bYFPRnm1p3oWHiZxNMikHey3BZvYA/vUiWk9tk2s6n1VhjNQRXJbux3KjeMghzz9c1YWksasCUJA6hiV+tXEnGRzFyCDzJISsqB5Mbd2yRGHMTeWfY9AfWp0WSxuFYEqFfAYfFEf9OlFW97beKC6sYVSRQjvvKtt8iCx6irO90W43I1uVuUKhH5ALAdD6dMD6UpZaFOH6MvSosNy9iXtncfbdPjnwASPF6ZoqH4KA0eyaxtJomJwZCwHoOMftR8PwVjWqBfx5mvXn2xnuNuDwo9adEPCT60yf4gPSpkGBgVCpS1pxLD9oiiqTtPdR6VDbagscbGGZDKwHiMZ4bn5HP5VdyMI0Zj5Vhb9Z+0mrTWQkZbKAjv3X/wDI+lbumrWlS7+O5WfwJrr20ttRgTvAr4w8cgPIIwVZT9DVZqEF9s2RyjB/FklvpWWm7ZW/ZTUW0wxPcWcOEQI2XiGPhy3Xz61bR/2i6RLbFrZJWbyjKgEH607WWIBXzOyOjCNA0a2sHe5eINfSDBlYksB7E9Pyqs7X6nHpcEhiO6YjPPTNAan20uZoyltbLCfVua881u9u7mdYXd3Y/CBznPTj19qYCnO5pFnGMCVN3O087zOTvc5NG2mnXkyI4Q7M55NbDs3/AGY6reqk9+i2yE5Cyk7vnj/xVlr3Zy50MI7lZICcLIgxz6EeXtVVl2Oo96foqLnxa2D4Ep7KeaNFjcd2knEjBfFt9vrVFqccU+ou8aOkbTAbX4O0dT6eVXRK+tIQjY3AHFV/UE9zXf0OojNbSK3+wadq0MjoqQ92zEhehyP6+lenpPG5UBgxZQ3H715hLEjBmJyxG1SegAIP8hV72e1VbWZ7d5N0zMFZtpchRwAAOAMD61Reu9d34mXZS+mfa44M1t8WhtnmRd7opO328x+ldXXZLafO6Pu8DeLHtSUqvU4zN9m7eE9orW3lfvWlYynd1C7SQPlwK9NaI4yv0rzDsk4k7SxyNhQnhHGAeP09K9TimRhuV0c+gNR11e88zG0f2kgQCfS9Pv4wl3axuQcg4wQfmOayGsaK1g08kYyqsoX/ALw27+Y/Wt7JH+JQTQOrQC8sGjKkyRHcuOrYz/LP1pXTah622Oe5ZqNOrrkDmYMIuDCwbHVPUZrY6CJDpcayqRJCTHkjHTkfoevtWPbehzJnMWC3scnIP6Vsuzsr3FjLGzFhG21SfT0/Wmtcu+qJaE7bMS4zuT/40y3+BvanQH7vHnTYeAw98Vl5yyma35jX8VxjyojGKhiXMrMfKnzyiJWJ8q0tDp8ZdvMDGU/aXVBZ2kgRvGR4R71VWijRtIWNhm4ly8nqWPrVPq10bvWjnLRo3Kj0FR3szajdtGivNOeiRNnb9On505ramYLWP6ZbQASS0p9Yt4u8lvooBJcBiwyeM5rFTLLaXj3KNhg/Kg8c+XFezaR2MbwyajNMB5Qhwfqazv8AaZpUNtpzm1tUt40YDIXlgac0xIXaZVqFUnKyhtbiK+tO9XGQcEe9bL+znsrEJD2g1KFWmc/4ONxwi9N/zJ6e2PWvPOxGnXV9qIt4lzDJIiy+yE8kfrX0HGiqqooAVQAAOgA6VZfYcARdB5jwMHI6/tQWs2kd9YyW9zyrqVBHkfWjc0Ndyhd2aUA5l1eVbInjN/avZXc9tKPvIyRj+dBd4cMPNf1rU9u4Pv4r5Bw3gf8AcVlCw3K3kaJTBnrKNV71Ybz5iNOGBGMA9P8ASjdD1h7KUx79kZbxug8VV80YEmfwScY9D61XXDPBMP4+v+b3qQUHiLatifvnrH2qOewkI+Bozg/ka6sBp+rz2luRERIjjBVj/WK6lzRgxA0vn4ywhh3XhdCQBbiQ49cY/mauba7kjbImcN6A0FphPc3BYcgMitjqFP8A5pyk4X4eaheNzczP9JGaz/ZtNG1ySVCkhL46g8Gr2OaK5XfE2JPTPNef6YxRZzhs+HH61b2t24IIcDPT1rLuq5j1mnB6gGtrm5uSikDvTuLcZYkDn6dPStP2Xhe3sPvRt7w71B9PKgC9nduDeQ7sHO5fXzJHnWhiljuoB3ZXjptqyzUbqwomQujaqwu0eg2SkeR6Ui8NIB5UjOG2N0anqB3jnPBxVNCB3A/cYMfGNuc+dVOtXQhiYs1HTXaRId5ww8z0NZ+azn1uc8mO0VsM56v8q9HUgHJkDM1pel3Ot3rpE7RWwb7+VRz/AJQa9A0vSrPSrfubGJEx8RI5Y+5oiztobK2S3gUJGnlUF1qNvbBi8ygZzg0WY2HgQAYELd1RcMeRWY7RRxX9u8V1/wAI9QaC1PtShkxbruH8bcCs1e6hc3rNvZnDfCkYJ/Sra69pyTiAkdAQrsBpi6f2meJJu8hWFyG9OQOfrXqA658q817HTNY6pPPqAFtF9nwDIQPMHJ9PKtYe1mjqn/8AQgb/ACuD+2aruO5vieJNK2xjHMvi3Oegqm1C7DOVB6+dU+pduNOjHdwtJKf+2M/zxWXve2in/h2cn/yYChWo8y32bB4Mudbj+22k0GfiGU9iKwAU42NwVOKNue1t+/8AwbWFP8xLf6VVWlzJdzTCcAS53AKMZzVtgGOI/oWZH2HowiTmEZ8ulRXEInix+P8AC3vUrA4x5VHC/BRjyhwKXE0rMH4nowO0fbuifjnp711LqMOxu/QexrqswDzEDa9J2YzNtZOJYXceUTE/M0ikFVIAqPRwVsLgkdYjj5VIkE0dvFI6jbJnaVNIWfcZl+k/9Z/sP0+JpknVWKnw4byoq1DxvAGKuGXcG6buD/pXaKzW5eVCjnOO7LAE9fLyqULOyIzJE0m7IkLHgegGOBSz9zVycyBJZ7ecW9ygWXazEI+4DA6UVp9+ftCBHKbnIO3zwM9KcmJJHItxulHOWLYPtxyKga0mjkWNYFLg8lGxt8s/SqmAaR74M1guI5CCD4h74pTdIM4defes9aab3LBhPODjky+JT8qS/lSztVnk3MrHHHH74pYUNW+VMo9hTH3OqpHdKsqPJGcbdpyDRU2uPDEwhsJVA/j8P71Q2ssF1KJ41CxrjA34B69PrRIuFazZZJy7N4l8sLnitT6x8Abf9yP0ok97fazOAu2KIHqFOTj8s0H/AHRLOWa8umx5ALjP1NS3DRzQRyTbwvQmNycZ9cUPDdyzai9iD90ylACfEOM5qP1lx+04/kl9MglDcQIsrruLYOAM9eetasaRbGeGdVCd3jCKMDy9Pl+tRahp0ZaPvjEIUXarbcHPz9sD60d43bw5ZSRyD0FUajUWPjmWKigcCZPt5ZK1vanYGVpCWz0B96zMRCcAqfUKucV7XptvDPHI8qo6klcEZH9dPpVTrXZHR7rJFstuw/HAAh+nSn9ICagGgr1aUseJ5NJKG4Dt8gjUM5H/AHCr3tDo9jp8hitry6d/JWOcVRrbs5JEuFHU9OK0FpOMwWa9GjcegLfOo1DwTI4RRluc+lBl5Wf7tyVqKZJCp3uTn3rtsr+oHYE05G4ZHSgLkmKRJlHGMEe1FaXN9ptxk9Ovzrp4wRjHFLjhsGbLqLKg6yI4ljYZyCP0paHg+6kMbdOqe1LU+R1KRZWR8+5t9OX/ANPkHn3BH70RpWntqELRxuBKhHhL9c4zj2FDaK4e1uBLwFjOdvUUXZW9rIFNs9yZcYIjX4fmccVn2EBjmYPpfNZx+ZqrDRLaGxMO4ysxzuOMA+wqsktJrhjHbnu5Achj0GDzmri0nFvbWcG3wFeW3jAx1oSxSVbuZ5BtGQIyTnf1zxVbrWzKI8jMM5kHdNps0Yu3GwqfvFB5IxUs8eHN9HOe7mxkMPhBGAR+n1o3UwhjdGZQSuR5GqSO8vZYWtDagx58Em8HgEeX5dfeouFQkQjLYJk8c8WoI8Dow7qTbuz1wcg0CiW1zLcxvGuzvDwefPirKRPs9uQpUSucBveqTTQwMxJJd2GM8evP9elLhi2TLFEsBcWEbJY92qzseGCjB9MmgrfT5LyBWTBbA37zgED8v0p89pA0DiKKZZwSe9lbgndk9DU2lzNIdy+BoAcxAEgn+I+h6/WpZxyJ3icsKQKY4htyxBG3d9MfOgNStLqPWBPbo+7uhuZV3EYC5OPTpVzbKO+kkKAljvKoD1J/WkvmhtdtyJWQK+wydSMn18ufXH5UUOPlATFvE7+SIzM0aDxNEcdfLPXNQG8hCNJHE+MHDAEAjP8AWaa13FeSXkiSrLGo+7ZR18I8/n6VHpLG8vLazyVCn8Jx55OahsLNOzhcmbDSbQWGl28A6hMnJzyTnz+dA65fJaW7SMSDzzn2q4nYJj26V5r2+1c96LSPoetb2mrzxMl25zMhqdy19fSSZJBbj5VX6lJiNbeM+Jx4iP0FTrIIkMrDKoOR60DCDO5dviPnT9jbFhor9xpCibenFJLGWTmj/suGxT2tgRsPX1pPfNT6ZsSLRZO6kaBuh5qznBPSqSQG2dXHOKu0bvUVlPUVXYPlumhoWyhqPiV92vIP8HiHypKmulLKCK6pKeItdX85sezsYktpYyN+/jbnbkfOrDTbJopZY4kE0B/Csx7sfPjmguz8ayzxROCUZTkZx/XStfCqxKqxgKq9ABgCsfWWFHxMb0o/8R/sKgiH2Jd6oxVT0GADn0oLUM/Y5XQkMqllIPIOKsYW/wAO3Azjr+YoK6UfZZlPTZS1pJZSI+g5OZkzeS3d4VySSNqZJJ+Vaa2tzGn3yp0zxzz61U6JbRRXFs+3c7r1b8Pyq6uzsQ7ePKhqH3MEEtP4lfNKZrl+7+GNDuGPPHTFB6fK8qqioqKuFLDr6fvVd9uuIFnaNxukfxMQM0bYzt31tEqqoOMlRgt86sA2riSlrDa7P/fdz1yfX1zVRdF9N1GK7VcI3xgHjr0q7BI8/PNV2tRBrOYsScc4/MVXXndzOialJMscU1vIBDI2WZFwceXz9/ehI3gRUt4I94x4kJ3KzY64P15xUnZdzcC6s5sNAoyFPrnFVukSvHqU6oxGN2D1PWrguAR+IJexNDcWix90AijBAUDb7CrHs3p8Ed+0ypgoCc5PnxVLayNN963BPkvArRaCSIrhh13Bfy5o0AmwSq84rMsdUmWGJ3ZuFBrxXVrpr3UZpGJILcfKvTu1s8iaVMVOCVryckmTmvS6ZOJjucRkqhhsA8P4hUCKIX+HwetTqeSfWlNbD6OuysCZ1PqFlFxI6i94uc01pUHnUZUCq9iR5k1j3aJqvM9LT6sLl6j55MkqOho3SZwIwjeVVRJzmjNOP+IYeWKXcDbiXaW5hcGlpMmPLw11OkJKc0tLibNigtmf/9k=.jpg" alt="LARASATI">
+        <div class="book-content">
+            <div class="book-title">LARASATI</div>
+            <div class="book-author">Pramoedya Ananta Toer</div>
+            <div class="book-description">Menceritakan perjuangan wanita pada era revolusi Larasati merupakan novel dengan tokoh utama wanita bernama Larasati. 
+                Karya Pram yang satu ini memberikan gambaran masyarakat selama masa revolusi. Tokoh Larasati diceritakan sebagai seorang wanita yang bercita-cita menjadi aktris 
+                dan memutuskan untuk pergi ke Jakarta. Dalam novel ini Pram ingin menyampaikan bahwa setiap orang memiliki caranya sendiri untuk berjuang. Sebagai seorang pekerja seni, 
+                Larasati menggunakan seninya untuk membakar semangat pejuang. Novel ini sangat sesuai untuk para wanita masa kini yang juga sedang berjuang....</div>
+            <a href="#" class="detail-button">Lihat Detail</a>
+        </div>
+    </div>
+
+    <div class="book-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/c/c4/TheAlchemist.jpg" alt="The Alchemist">
+        <div class="book-content">
+            <div class="book-title">The Alchemist</div>
+            <div class="book-author">Paulo Coelho</div>
+            <div class="book-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ratione aut repellendus.</div>
+            <a href="#" class="detail-button">Lihat Detail</a>
+        </div>
+    </div>
+
+    <div class="book-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/d/d8/Game_of_Thrones_2011.jpg" alt="Game of Thrones">
+        <div class="book-content">
+            <div class="book-title">Game of Thrones</div>
+            <div class="book-author">George R. R. Martin</div>
+            <div class="book-description">Lorem ipsum dolor sit amet consectetur...</div>
+            <a href="#" class="detail-button">Lihat Detail</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
     </div>
     <footer>
         &copy; 2025 Perpustakaan Anya Riskirana | Semua Hak Dilindungi
