@@ -2,102 +2,111 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Katalog Buku Perpustakaan</title>
+    <title>Featured Books</title>
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
-            background-color: #f4f6f8;
-            margin: 30px;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
         }
         h1 {
             text-align: center;
             color: #2c3e50;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
             margin-top: 30px;
+        }
+        .book-card {
             background-color: #ffffff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
         }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ccc;
-            vertical-align: top;
+        .book-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
         }
-        th {
-            background-color: #34495e;
-            color: white;
-            text-align: left;
+        .book-content {
+            padding: 15px;
+            flex: 1;
         }
-        tr:nth-child(even) {
-            background-color: #ecf0f1;
-        }
-        .cover-img {
-            width: 80px;
-            height: auto;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.2);
-        }
-        caption {
-            caption-side: top;
-            font-weight: bold;
-            margin-bottom: 10px;
+        .book-title {
             font-size: 1.1em;
+            font-weight: bold;
+            color: #009688;
+            margin-bottom: 5px;
+        }
+        .book-author {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .book-description {
+            font-size: 0.9em;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        .detail-button {
+            display: inline-block;
+            text-align: center;
+            padding: 8px 12px;
+            border: 1px solid #009688;
+            color: #009688;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .detail-button:hover {
+            background-color: #009688;
+            color: #fff;
         }
     </style>
 </head>
 <body>
 
-<h1>Katalog Buku Perpustakaan</h1>
+<h1>Featured Books</h1>
 
-<table>
-    <caption>Daftar Koleksi Buku dengan Cover</caption>
-    <thead>
-        <tr>
-            <th>Cover</th>
-            <th>Nomor Panggil</th>
-            <th>Judul</th>
-            <th>Pengarang</th>
-            <th>Penerbit</th>
-            <th>Tahun</th>
-            <th>Lokasi Rak</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><img src="https://upload.wikimedia.org/wikipedia/id/2/26/Laskar_Pelangi_sampul.jpg" alt="Laskar Pelangi" class="cover-img"></td>
-            <td>899.221 HIR l</td>
-            <td>Laskar Pelangi</td>
-            <td>Andrea Hirata</td>
-            <td>Bentang Pustaka</td>
-            <td>2005</td>
-            <td>Rak Fiksi A1</td>
-            <td>Tersedia</td>
-        </tr>
-        <tr>
-            <td><img src="https://upload.wikimedia.org/wikipedia/id/c/c2/Negeri_5_Menara.jpg" alt="Negeri 5 Menara" class="cover-img"></td>
-            <td>899.221 FUA n</td>
-            <td>Negeri 5 Menara</td>
-            <td>Ahmad Fuadi</td>
-            <td>Gramedia</td>
-            <td>2009</td>
-            <td>Rak Fiksi A2</td>
-            <td>Dipinjam</td>
-        </tr>
-        <tr>
-            <td><img src="https://ebooks.gramedia.com/ebook-covers/45269/image_highres/ID_KPG2018MTH03FILT.jpg" alt="Filosofi Teras" class="cover-img"></td>
-            <td>128.3 MAN f</td>
-            <td>Filosofi Teras</td>
-            <td>Henry Manampiring</td>
-            <td>KPG</td>
-            <td>2018</td>
-            <td>Rak Psikologi B1</td>
-            <td>Tersedia</td>
-        </tr>
-        <!-- Tambahkan buku lainnya di sini -->
-    </tbody>
-</table>
+<div class="book-container">
+    <div class="book-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Rich_Dad_Poor_Dad.jpg" alt="Rich Dad Poor Dad">
+        <div class="book-content">
+            <div class="book-title">Rich Dad Poor Dad</div>
+            <div class="book-author">Robert T. Kiyosaki</div>
+            <div class="book-description">Lorem ipsum dolor sit amet consectetur...</div>
+            <a href="#" class="detail-button">Lihat Detail</a>
+        </div>
+    </div>
+
+    <div class="book-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/c/c4/TheAlchemist.jpg" alt="The Alchemist">
+        <div class="book-content">
+            <div class="book-title">The Alchemist</div>
+            <div class="book-author">Paulo Coelho</div>
+            <div class="book-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ratione aut repellendus.</div>
+            <a href="#" class="detail-button">Lihat Detail</a>
+        </div>
+    </div>
+
+    <div class="book-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/d/d8/Game_of_Thrones_2011.jpg" alt="Game of Thrones">
+        <div class="book-content">
+            <div class="book-title">Game of Thrones</div>
+            <div class="book-author">George R. R. Martin</div>
+            <div class="book-description">Lorem ipsum dolor sit amet consectetur...</div>
+            <a href="#" class="detail-button">Lihat Detail</a>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
