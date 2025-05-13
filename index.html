@@ -1,154 +1,107 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perpustakaan Anya Riskirana</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            text-align: center;
-            background-image: url('https://images.openai.com/thumbnails/c930b26d40ccec630c1aa5133b8fd114.jpeg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-        }
-        .navbar {
-            background: rgba(34, 139, 34, 0.8);
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .navbar h1 {
-            color: #fff;
-            font-size: 20px;
-            margin: 0;
-            text-align: left;
-            padding-left: 10px;
-        }
-        .nav-links {
-            display: flex;
-            flex-direction: row;
-            gap: 15px;
-            padding-right: 10px;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: bold;
-        }
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-        .content {
-            flex: 1;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.6);
-            margin: 10px;
-            max-width: 90%;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
-        }
-        .marquee {
-            white-space: nowrap;
-            overflow: hidden;
-            display: block;
-            width: 100%;
-            animation: marquee 10s linear infinite;
-        }
-        @keyframes marquee {
-            from { transform: translateX(100%); }
-            to { transform: translateX(-100%); }
-        }
-        footer {
-            background: rgba(34, 139, 34, 0.9);
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            width: 100%;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-        }
-        a {
-            color: #90ee90;
-            font-weight: bold;
-        }
-        a:hover {
-            color: #32cd32;
-        }
-        @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                text-align: center;
-                padding: 10px;
-            }
-            .nav-links {
-                flex-direction: column;
-                align-items: center;
-                padding: 5px;
-            }
-            .nav-links a {
-                padding: 5px;
-            }
-            .content {
-                max-width: 95%;
-                padding: 15px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="navbar">
-        <h1>Perpustakaan Anya Riskirana</h1>
-        <div class="nav-links">
-            <a href="index.html">Homepage</a>
-            <a href="biodata.html">About Me</a>
-            <a href="contact us.html">Contact Us</a>
-            <a href="Koleksi Buku">Koleksi Buku</a>
-        </div>
-    </div>
-    <div class="content">
-        <h2 class="marquee">Selamat Datang di Perpustakaan Anya Riskirana</h2>
-        <p>Membaca adalah jendela dunia, mari buka lebih banyak jendela!</p><br>
-        <p>Perpustakaan Anya Riskirana adalah tempat di mana ilmu pengetahuan dan wawasan terbuka luas untuk semua.</p>
-        <p>Perpustakaan ini menyediakan sumber daya terbaik guna mendukung kebutuhan belajar dan rekreasi Anda.</p>
-        <ul>
-            Kami bekerja sama dengan <a href="https://library.sari-mutiara.ac.id/" target="_blank">Perpustakaan Sari Mutiara</a>
-        </ul><br>
-        <p>Selamat menjelajahi jendela dunia!❤️</p>
-<head>
   <meta charset="UTF-8">
-  <title>Perpustakaan Digital - Nuansa Hutan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perpustakaan Anya Riskirana</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
+      text-align: center;
       background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      color: white;
+    }
+
+    .navbar {
+      background: rgba(34, 139, 34, 0.8);
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar h1 {
+      font-size: 20px;
+      margin: 0;
+      padding-left: 10px;
+      text-align: left;
       color: #fff;
     }
 
-    .overlay {
-      background-color: rgba(0, 50, 0, 0.7); /* gelap transparan */
-      padding: 40px;
-      min-height: 100vh;
+    .nav-links {
+      display: flex;
+      gap: 15px;
+      padding-right: 10px;
     }
 
-    h1 {
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      margin: 20px auto;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .marquee {
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+      width: 100%;
+      animation: marquee 10s linear infinite;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+
+    footer {
+      background: rgba(34, 139, 34, 0.9);
+      color: white;
       text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      width: 100%;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    a {
+      color: #90ee90;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #32cd32;
+    }
+
+    .book-section {
+      background-color: rgba(0, 50, 0, 0.7);
+      padding: 40px 20px;
+      margin: 20px auto;
+      max-width: 1100px;
+      border-radius: 10px;
+    }
+
+    .book-section h2 {
       font-size: 36px;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       color: #f4d35e;
       text-shadow: 2px 2px 4px #000;
     }
@@ -202,15 +155,48 @@
     .book a:hover {
       background-color: #238636;
     }
+
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+      }
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      .content, .book-section {
+        max-width: 95%;
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div class="overlay">
-    <h1>Daftar Buku Digital</h1>
+  <div class="navbar">
+    <h1>Perpustakaan Anya Riskirana</h1>
+    <div class="nav-links">
+      <a href="index.html">Homepage</a>
+      <a href="biodata.html">About Me</a>
+      <a href="contact us.html">Contact Us</a>
+      <a href="koleksi-buku.html">Koleksi Buku</a>
+    </div>
+  </div>
 
+  <div class="content">
+    <h2 class="marquee">Selamat Datang di Perpustakaan Anya Riskirana</h2>
+    <p>Membaca adalah jendela dunia, mari buka lebih banyak jendela!</p><br>
+    <p>Perpustakaan Anya Riskirana adalah tempat di mana ilmu pengetahuan dan wawasan terbuka luas untuk semua.</p>
+    <p>Perpustakaan ini menyediakan sumber daya terbaik guna mendukung kebutuhan belajar dan rekreasi Anda.</p>
+    <p>Kami bekerja sama dengan <a href="https://library.sari-mutiara.ac.id/" target="_blank">Perpustakaan Sari Mutiara</a>.</p>
+    <p>Selamat menjelajahi jendela dunia!❤️</p>
+  </div>
+
+  <div class="book-section">
+    <h2>Daftar Buku Digital</h2>
     <div class="book-list">
-
       <div class="book">
         <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/Harry_Potter_and_the_Deathly_Hallows.jpg" alt="Harry Potter">
         <div class="book-title">Harry Potter</div>
@@ -240,13 +226,12 @@
         <div class="book-title">Cantik Itu Luka</div>
         <a href="https://example.com/cantik-itu-luka" target="_blank">Baca Buku</a>
       </div>
-
     </div>
   </div>
 
-</body>
-    <footer>
-        &copy; 2025 Perpustakaan Anya Riskirana | Semua Hak Dilindungi
-    </footer>
+  <footer>
+    &copy; 2025 Perpustakaan Anya Riskirana | Semua Hak Dilindungi
+  </footer>
+
 </body>
 </html>
