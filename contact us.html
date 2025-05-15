@@ -1,122 +1,126 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us Perpustakaan</title>
-    <style>
-        /* Styling halaman */
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://files.oaiusercontent.com/file-Q51kzyMpVDwcMQQBwrF2rK?se=2025-03-19T06%3A51%3A10Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D401e7b80-2ef0-47fa-9002-d4ca2fb0e557.webp&sig=JgZXpVliICS1WJOIMpQaNajnhAThF0/JFut9RgCBkT8%3D');
-            background-attachment: fixed;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Perpustakaan Hutan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1506765515384-028b60a970df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #004d00;
+    }
 
-        /* Header */
-        .header {
-            background: rgba(0, 51, 0, 0.8);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 24px;
-            position: relative;
-        }
+    .header {
+      background-color: rgba(0, 51, 0, 0.85);
+      padding: 30px 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
 
-        .nav-links {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    .header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            font-weight: bold;
-        }
+    .header p {
+      margin-top: 8px;
+      font-size: 18px;
+    }
 
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    }
 
-        /* Container form */
-        .container {
-            background: rgba(255, 255, 255, 0.9);
-            width: 50%;
-            margin: 50px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+      color: #006600;
+    }
 
-        label {
-            font-weight: bold;
-            color: #004d00;
-        }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #66bb6a;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: #f4fdf6;
+    }
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0 15px;
-            border: 1px solid #004d00;
-            border-radius: 5px;
-        }
+    button {
+      width: 100%;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-        button {
-            background: #008000;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-        }
+    button:hover {
+      background-color: #1b5e20;
+    }
 
-        button:hover {
-            background: #006600;
-        }
+    .footer {
+      background-color: rgba(0, 51, 0, 0.85);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      font-size: 14px;
+    }
 
-        /* Footer */
-        .footer {
-            text-align: center;
-            color: white;
-            background: rgba(0, 51, 0, 0.8);
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    @media (max-width: 600px) {
+      .container {
+        margin: 30px 20px;
+        padding: 20px;
+      }
+
+      .header h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Contact Us</h1>
-        <p>Silakan hubungi kami jika ada pertanyaan atau saran</p>
-        
-    </div>
 
-    <div class="container">
-        <form>
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+  <div class="header">
+    <h1>Hubungi Kami</h1>
+    <p>Perpustakaan Anya Riskirana</p>
+  </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+  <div class="container">
+    <form>
+      <label for="name">Nama:</label>
+      <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required />
 
-            <label for="message">Pesan:</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda" required></textarea>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required />
 
-            <button type="submit">Kirim</button>
-        </form>
-    </div>
+      <label for="message">Pesan:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
 
-    <div class="footer">
-        &copy; 2025 Perpustakaan Anya Riskirana | Semua Hak Dilindungi
-    </div>
+      <button type="https://accounts.google.com/SignOutOptions?hl=id&continue=https://mail.google.com/mail/&service=mail&ec=GBRAFw">Kirim Pesan</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Perpustakaan Anya Riskirana | Semua Hak Dilindungi
+  </div>
+
 </body>
 </html>
