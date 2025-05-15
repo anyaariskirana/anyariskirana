@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <style>
-        /* Styling halaman */
         body {
             font-family: Arial, sans-serif;
             background-image: url('https://files.oaiusercontent.com/file-Q51kzyMpVDwcMQQBwrF2rK?se=2025-03-19T06%3A51%3A10Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D401e7b80-2ef0-47fa-9002-d4ca2fb0e557.webp&sig=JgZXpVliICS1WJOIMpQaNajnhAThF0/JFut9RgCBkT8%3D');
@@ -16,17 +15,15 @@
             color: white;
         }
 
-        /* Header */
         .header {
             background: rgba(0, 51, 0, 0.8);
             color: white;
             text-align: center;
             padding: 20px;
             font-size: 24px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Efek bayangan teks */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        /* Container utama */
         .container {
             background: rgba(255, 255, 255, 0.9);
             width: 60%;
@@ -39,8 +36,8 @@
 
         h1 {
             text-align: center;
-            color: #ffffff; /* Warna putih agar kontras */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Efek bayangan */
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
         h4 {
@@ -48,7 +45,6 @@
             color: #004d00;
         }
 
-        /* Tabel */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -73,7 +69,6 @@
             background: #f2f2f2;
         }
 
-        /* Navigasi */
         ul {
             list-style: none;
             text-align: center;
@@ -100,7 +95,6 @@
             color: white;
         }
 
-        /* Footer */
         .footer {
             text-align: center;
             color: white;
@@ -109,6 +103,49 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+
+        /* Tambahan untuk CV dan LinkedIn */
+        .links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-weight: bold;
+            gap: 8px;
+        }
+
+        .cv-link {
+            color: #2e7d32;
+        }
+
+        .linkedin-link {
+            color: #0e76a8;
+        }
+
+        .links img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .wa-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .wa-link img {
+            width: 28px;
+            vertical-align: middle;
+            margin-right: 8px;
         }
     </style>
 </head>
@@ -120,42 +157,35 @@
     </div>
 
     <div class="container">
-  <p><strong>Ingin tahu lebih lanjut tentang saya?</strong></p>
-  <a href="https://drive.google.com/file/d/1gXes4-uJxZY3FwMOSxdPBc-U5LlXYNDn/view?usp=sharing" target="_blank" style="color: #2e7d32; text-decoration: none; font-weight: bold;">📄 Lihat CV Saya</a>
-  <br>
-  <a href="https://www.linkedin.com/in/anyariskirana" target="_blank" style="color: #0e76a8; text-decoration: none; font-weight: bold;">🔗 Kunjungi LinkedIn Saya</a>
-</div>
-            <a href="https://wa.me/6287868071722?text=Halo%20saya%20tertarik%20dengan%20acara%20bukunya" target="_blank"</a>
-       
+        <a href="https://drive.google.com/file/d/1gXes4-uJxZY3FwMOSxdPBc-U5LlXYNDn/view?usp=sharing"
+       class="icon-link cv-link" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="CV">
+      Lihat CV Saya
+    </a>
+
+    <a href="https://www.linkedin.com/in/anyariskirana"
+       class="icon-link linkedin-link" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+      LinkedIn Saya
+    </a>
+
+        </div>
+
+        <div class="wa-link">
+            <a href="https://wa.me/6287868071722?text=Halo%20saya%20tertarik%20dengan%20acara%20bukunya" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                Hubungi Saya via WhatsApp
+            </a>
+        </div>
+
         <table>
-            <tr>
-                <th>Informasi</th>
-                <th>Detail</th>
-            </tr>
-            <tr>
-                <td><b>Nama</b></td>
-                <td>Anya Riskirana</td>
-            </tr>
-            <tr>
-                <td><b>NIM</b></td>
-                <td>220709026</td>
-            </tr>
-            <tr>
-                <td><b>Program Studi</b></td>
-                <td>Perpustakaan dan Sains Informasi</td>
-            </tr>
-            <tr>
-                <td><b>Fakultas</b></td>
-                <td>Ilmu Budaya</td>
-            </tr>
-            <tr>
-                <td><b>Universitas</b></td>
-                <td>Universitas Sumatera Utara</td>
-            </tr>
-            <tr>
-                <td><b>Email</b></td>
-                <td>anyariskirana@gmail.com</td>
-            </tr>
+            <tr><th>Informasi</th><th>Detail</th></tr>
+            <tr><td><b>Nama</b></td><td>Anya Riskirana</td></tr>
+            <tr><td><b>NIM</b></td><td>220709026</td></tr>
+            <tr><td><b>Program Studi</b></td><td>Perpustakaan dan Sains Informasi</td></tr>
+            <tr><td><b>Fakultas</b></td><td>Ilmu Budaya</td></tr>
+            <tr><td><b>Universitas</b></td><td>Universitas Sumatera Utara</td></tr>
+            <tr><td><b>Email</b></td><td>anyariskirana@gmail.com</td></tr>
         </table>
 
         <h4>Halaman Lain</h4>
@@ -170,4 +200,4 @@
     </div>
 
 </body>
-</html> 
+</html>
