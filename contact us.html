@@ -19,6 +19,27 @@
       text-align: center;
       color: white;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+
+    .back-home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .back-home a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: rgba(0, 128, 0, 0.6);
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: rgba(0, 100, 0, 0.8);
     }
 
     .header h1 {
@@ -99,12 +120,15 @@
 <body>
 
   <div class="header">
+    <div class="back-home">
+      <a href="index.html">&larr; Kembali ke Homepage</a>
+    </div>
     <h1>Hubungi Kami</h1>
-    <p>Perpustakaan Anya Riskirana</p>
+    <p>Perpustakaan Anya Riskirana — Suara Rimba untuk Literasi</p>
   </div>
 
   <div class="container">
-    <form>
+    <form action="https://formspree.io/f/xyznabcd" method="POST">
       <label for="name">Nama:</label>
       <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required />
 
@@ -114,7 +138,7 @@
       <label for="message">Pesan:</label>
       <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
 
-      <button type= <a href="https://accounts.google.com/SignOutOptions?hl=id&continue=https://mail.google.com/mail/&service=mail&ec=GBRAFw" target="_blank"Kirim Pesan</button>
+      <button type="submit">Kirim Pesan</button>
     </form>
   </div>
 
