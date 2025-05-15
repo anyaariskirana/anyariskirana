@@ -1,203 +1,245 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://files.oaiusercontent.com/file-Q51kzyMpVDwcMQQBwrF2rK?se=2025-03-19T06%3A51%3A10Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D401e7b80-2ef0-47fa-9002-d4ca2fb0e557.webp&sig=JgZXpVliICS1WJOIMpQaNajnhAThF0/JFut9RgCBkT8%3D');
-            background-size: cover;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 0;
-            color: white;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://files.oaiusercontent.com/file-Q51kzyMpVDwcMQQBwrF2rK?se=2025-03-19T06%3A51%3A10Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D401e7b80-2ef0-47fa-9002-d4ca2fb0e557.webp&sig=JgZXpVliICS1WJOIMpQaNajnhAThF0/JFut9RgCBkT8%3D');
+      background-size: cover;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
 
-        .header {
-            background: rgba(0, 51, 0, 0.8);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 24px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
+    .header {
+      background: rgba(0, 51, 0, 0.8);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
 
-        .container {
-            background: rgba(255, 255, 255, 0.9);
-            width: 60%;
-            margin: 50px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            color: black;
-        }
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      width: 75%;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      color: #222;
+    }
 
-        h1 {
-            text-align: center;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
+    h1, h4 {
+      text-align: center;
+    }
 
-        h4 {
-            text-align: center;
-            color: #004d00;
-        }
+    h1 {
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
+    h4 {
+      color: #004d00;
+      margin-top: 40px;
+    }
 
-        table, th, td {
-            border: 1px solid #004d00;
-        }
+    /* Link Section */
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
 
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
 
-        th {
-            background: #008000;
-            color: white;
-        }
+    .links img {
+      width: 22px;
+      height: 22px;
+    }
 
-        tr:nth-child(even) {
-            background: #f2f2f2;
-        }
+    .cv-link {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+      border: 1px solid #2e7d32;
+    }
 
-        ul {
-            list-style: none;
-            text-align: center;
-            padding: 0;
-        }
+    .cv-link:hover {
+      background-color: #2e7d32;
+      color: white;
+    }
 
-        ul li {
-            display: inline;
-            margin: 0 10px;
-        }
+    .linkedin-link {
+      background-color: #e3f2fd;
+      color: #0e76a8;
+      border: 1px solid #0e76a8;
+    }
 
-        ul li a {
-            text-decoration: none;
-            color: #008000;
-            font-weight: bold;
-            padding: 5px 10px;
-            border: 2px solid #008000;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
+    .linkedin-link:hover {
+      background-color: #0e76a8;
+      color: white;
+    }
 
-        ul li a:hover {
-            background: #008000;
-            color: white;
-        }
+    .wa-link {
+      text-align: center;
+      margin-top: 20px;
+    }
 
-        .footer {
-            text-align: center;
-            color: white;
-            background: rgba(0, 51, 0, 0.8);
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
+    .wa-link a {
+      display: inline-flex;
+      align-items: center;
+      color: #25d366;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      background: #e9fef1;
+      padding: 8px 12px;
+      border: 1px solid #25d366;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
 
-        /* Tambahan untuk CV dan LinkedIn */
-        .links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
+    .wa-link a:hover {
+      background: #25d366;
+      color: white;
+    }
 
-        .links a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            font-weight: bold;
-            gap: 8px;
-        }
+    .wa-link img {
+      width: 24px;
+      margin-right: 8px;
+    }
 
-        .cv-link {
-            color: #2e7d32;
-        }
+    /* Tabel */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
 
-        .linkedin-link {
-            color: #0e76a8;
-        }
+    table, th, td {
+      border: 1px solid #004d00;
+    }
 
-        .links img {
-            width: 24px;
-            height: 24px;
-        }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
 
-        .wa-link {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-        }
+    th {
+      background-color: #008000;
+      color: white;
+    }
 
-        .wa-link img {
-            width: 28px;
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-    </style>
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    ul {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      margin-top: 30px;
+    }
+
+    ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #008000;
+      font-weight: bold;
+      padding: 6px 12px;
+      border: 2px solid #008000;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    ul li a:hover {
+      background: #008000;
+      color: white;
+    }
+
+    .footer {
+      text-align: center;
+      color: white;
+      background: rgba(0, 51, 0, 0.8);
+      padding: 12px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>About Me</h1>
-        <p>Halaman ini berisi informasi tentang saya</p>
+  <div class="header">
+    <h1>About Me</h1>
+    <p>Halaman ini berisi informasi tentang saya</p>
+  </div>
+
+  <div class="container">
+
+    <div class="links">
+      <a href="https://drive.google.com/file/d/1gXes4-uJxZY3FwMOSxdPBc-U5LlXYNDn/view?usp=sharing"
+         class="cv-link" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="CV">
+        Lihat CV
+      </a>
+
+      <a href="https://www.linkedin.com/in/anyariskirana"
+         class="linkedin-link" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        LinkedIn
+      </a>
     </div>
 
-    <div class="container">
-        <a href="https://drive.google.com/file/d/1gXes4-uJxZY3FwMOSxdPBc-U5LlXYNDn/view?usp=sharing"
-       class="icon-link cv-link" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="CV">
-      Lihat CV Saya
-    </a>
-
-    <a href="https://www.linkedin.com/in/anyariskirana"
-       class="icon-link linkedin-link" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-      LinkedIn Saya
-    </a>
-
-        </div>
-
-        <div class="wa-link">
-            <a href="https://wa.me/6287868071722?text=Halo%20saya%20tertarik%20dengan%20acara%20bukunya" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-                Hubungi Saya via WhatsApp
-            </a>
-        </div>
-
-        <table>
-            <tr><th>Informasi</th><th>Detail</th></tr>
-            <tr><td><b>Nama</b></td><td>Anya Riskirana</td></tr>
-            <tr><td><b>NIM</b></td><td>220709026</td></tr>
-            <tr><td><b>Program Studi</b></td><td>Perpustakaan dan Sains Informasi</td></tr>
-            <tr><td><b>Fakultas</b></td><td>Ilmu Budaya</td></tr>
-            <tr><td><b>Universitas</b></td><td>Universitas Sumatera Utara</td></tr>
-            <tr><td><b>Email</b></td><td>anyariskirana@gmail.com</td></tr>
-        </table>
-
-        <h4>Halaman Lain</h4>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contact us.html">Contact Us</a></li>
-        </ul>
+    <div class="wa-link">
+      <a href="https://wa.me/6287868071722?text=Halo%20saya%20tertarik%20dengan%20acara%20bukunya" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        Hubungi Saya via WhatsApp
+      </a>
     </div>
 
-    <div class="footer">
-        &copy; 2025 Perpustakaan Anya Riskirana | Semua Hak Dilindungi
-    </div>
+    <table>
+      <tr><th>Informasi</th><th>Detail</th></tr>
+      <tr><td><b>Nama</b></td><td>Anya Riskirana</td></tr>
+      <tr><td><b>NIM</b></td><td>220709026</td></tr>
+      <tr><td><b>Program Studi</b></td><td>Perpustakaan dan Sains Informasi</td></tr>
+      <tr><td><b>Fakultas</b></td><td>Ilmu Budaya</td></tr>
+      <tr><td><b>Universitas</b></td><td>Universitas Sumatera Utara</td></tr>
+      <tr><td><b>Email</b></td><td>anyariskirana@gmail.com</td></tr>
+    </table>
+
+    <h4>Halaman Lain</h4>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact us.html">Contact Us</a></li>
+    </ul>
+
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Perpustakaan Anya Riskirana | Semua Hak Dilindungi
+  </div>
 
 </body>
 </html>
