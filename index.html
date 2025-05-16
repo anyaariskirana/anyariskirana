@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Perpustakaan Anya Riskirana</title>
   <style>
     body {
@@ -156,6 +156,29 @@
       background-color: #238636;
     }
 
+    .cookie-banner {
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: none;
+      z-index: 1000;
+    }
+
+    .cookie-banner button {
+      background-color: #2b9348;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin-left: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
     @media (max-width: 600px) {
       .navbar {
         flex-direction: column;
@@ -192,7 +215,8 @@
     <p>Perpustakaan ini menyediakan sumber daya terbaik guna mendukung kebutuhan belajar dan rekreasi Anda.</p>
     <p>Kami bekerja sama dengan <a href="https://library.sari-mutiara.ac.id/" target="_blank">Perpustakaan Sari Mutiara</a>.</p>
     <p>Selamat menjelajahi jendela dunia!❤️</p>
-    
+  </div>
+
   <div class="book-section">
     <h2>Daftar Buku Digital</h2>
     <div class="book-list">
@@ -215,33 +239,34 @@
       </div>
 
       <div class="book">
-        <img src="https://image.gramedia.net/rs:fit:0:0/plain/https://cdn.gramedia.com/uploads/items/9786020633176_.Atomic_Habit.jpg" alt="Atomic Habits: Perubahan Kecil yang Memberikan Hasil Luar Biasa">
+        <img src="https://image.gramedia.net/rs:fit:0:0/plain/https://cdn.gramedia.com/uploads/items/9786020633176_.Atomic_Habit.jpg" alt="Atomic Habits">
         <div class="book-title">Atomic Habits: Perubahan Kecil yang Memberikan Hasil Luar Biasa</div>
         <a href="https://drive.google.com/file/d/16akgSqfTjNcJfTMTcsoZUbiMX8ot7XFX/view?usp=sharing" target="_blank">Baca Buku</a>
       </div>
+    </div>
+  </div>
 
-      <div class="cookie-banner" id="cookie-banner">
+  <div class="cookie-banner" id="cookie-banner">
     Situs ini menggunakan cookie untuk meningkatkan pengalaman pengguna. 
     <button onclick="acceptCookies()">Saya Setuju</button>
-</div>
-
-<script>
-    function acceptCookies() {
-        localStorage.setItem("cookieAccepted", "true");
-        document.getElementById("cookie-banner").style.display = "none";
-    }
-
-    window.onload = function () {
-        if (!localStorage.getItem("cookieAccepted")) {
-            document.getElementById("cookie-banner").style.display = "block";
-        }
-    };
-</script>
-
+  </div>
 
   <footer>
     &copy; 2025 Perpustakaan Anya Riskirana | Semua Hak Dilindungi
   </footer>
+
+  <script>
+    function acceptCookies() {
+      localStorage.setItem("cookieAccepted", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    }
+
+    window.onload = function () {
+      if (!localStorage.getItem("cookieAccepted")) {
+        document.getElementById("cookie-banner").style.display = "block";
+      }
+    };
+  </script>
 
 </body>
 </html>
