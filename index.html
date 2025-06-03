@@ -314,6 +314,18 @@
       </div>
     </div>
   </div>
+  <div class="forum-section">
+  <h2>Forum Diskusi Pengunjung</h2>
+  <p>Silakan tinggalkan komentar, pertanyaan, atau saran Anda untuk perpustakaan kami.</p>
+  <form id="discussion-form">
+    <input type="text" id="name" placeholder="Nama Anda" required>
+    <textarea id="message" rows="4" placeholder="Tulis pesan Anda di sini..." required></textarea>
+    <button type="submit">Kirim</button>
+  </form>
+  <div class="discussion-list" id="discussion-list">
+    <!-- Komentar akan ditampilkan di sini -->
+  </div>
+</div>
 
   <div class="cookie-banner" id="cookie-banner">
     Situs ini menggunakan cookie untuk meningkatkan pengalaman pengguna. 
@@ -324,14 +336,7 @@
     &copy; 2025 Perpustakaan Anya Riskirana | Semua Hak Dilindungi
   </footer>
 
-  <script>
-    function acceptCookies() {
-      document.getElementById("cookie-banner").style.display = "none";
-    }
-    window.onload = function () {
-      document.getElementById("cookie-banner").style.display = "block";
-    };
-  </script>
+  
 
 </body>
 </html>
